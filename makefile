@@ -32,7 +32,7 @@ CXXFLAGS+=$(DDEBUG) -w -fpermissive -Wall -fno-rtti -Iext/FastPFor/headers $(DEF
 
 #------------------- MAKE -------------------#
 
-all: trle-client worker master
+all: trle-client worker master net-master-receiver net-master-sender
 
 trle-client.o: $(TP)trle-client.c
 	$(CC) -O2 $(CFLAGS) $(MARCH) -c $(TP)trle-client.c -o trle-client.o
