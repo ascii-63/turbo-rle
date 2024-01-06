@@ -9,3 +9,4 @@ folder_path="$1"
 
 
 rm -f $folder_path/*.part?
+rm -f $folder_path/temp/*

@@ -86,7 +86,7 @@ status ALWAYS_INLINE merge(char *__restrict _dir, char *__restrict _fout)
 #define MERGE_COMMAND "/bin/bash ./bash/merge.sh "
     uint8_t l1 = strlen(MERGE_COMMAND);
     uint8_t l2 = strlen(_dir);
-    uint8_t l3 = strlen(_fout) + strlen(COMPRESSION_EXTENTION);
+    uint8_t l3 = strlen(_fout);
 
     char *cmd = (char *)malloc(l1 + l2 + l3 + 2);
     if (!cmd)
@@ -98,7 +98,7 @@ status ALWAYS_INLINE merge(char *__restrict _dir, char *__restrict _fout)
     strcat(cmd, _dir);
     strcat(cmd, SPACE_STRING);
     strcat(cmd, _fout);
-    strcat(cmd, COMPRESSION_EXTENTION);
+    // strcat(cmd, COMPRESSION_EXTENTION);
 
     if (system(cmd) == SYSTEM_CALL_FAIL_VALUE)
     {
@@ -173,6 +173,10 @@ int main(int argc, char *argv[])
     status merge_res = merge(TEMP_FILES_DIR, rle_file);
     if (merge_res == EXIT_FAILURE)
         exit(EXIT_FAILURE);
+
+    ///////////////////////////////////////////////////////////////////
+
+    status clean_res = cleanUp(FILES_DIR);
 
     return EXIT_SUCCESS;
 }
