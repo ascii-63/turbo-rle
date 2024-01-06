@@ -19,7 +19,7 @@
 #define COMPRESSION_EXTENTION ".rle"
 #define SPACE_STRING " "
 #define FILES_DIR "files/"
-#define TEMP_FILES_DIR "files/temp"
+#define TEMP_FILES_DIR "files/temp/"
 
 #define _display(_cmd_) fprintf(stdout, "%s\n", _cmd_);
 #define _checkpoint(_idx_) fprintf(stdout, "CHECKPOINT #%d\n", _idx_);
