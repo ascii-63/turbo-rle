@@ -5,3 +5,5 @@
 ./net-master-receiver 20000 files/temp/part0 &
 ./net-master-receiver 20001 files/temp/part1 &
 ./net-master-receiver 20002 files/temp/part2 &
+
+./master files/enwik9.txt
