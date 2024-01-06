@@ -116,7 +116,7 @@ int main(int argc, char *argv[])
     // free(file);
 
     /////////////////////////////////
-    usleep(10000);
+    // usleep(10000);
     FILE *file_in = fopen(file_path, "rb");
     if (!file_in)
     {
